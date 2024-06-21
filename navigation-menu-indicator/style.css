@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+:root {
+    --clr: #222327;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    position: relative;
+    bottom: 10px;
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    width: 350px;
+}
+
+.menu__item {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.menu__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.menu__icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: .5s;
+    color: var(--clr);
+}
+
+.menu__item.active .menu__icon {
+    transform: translateY(-35px);
+}
+
+.menu__text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+    transition: .5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.menu__item.active .menu__text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background: #29fd53;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: .5s;
+}
+
+.indicator::after,
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+    left: -22px;
+    border-top-right-radius: 50px;
+}
+
+.indicator::before {
+    right: -22px;
+    border-top-left-radius: 50px;
+}
+
+.menu__item:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.menu__item:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.menu__item:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.menu__item:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.menu__item:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
