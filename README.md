@@ -1,4 +1,4 @@
-# mini proyectos en js
+# mini proyectos web
 
 | N°     | Nombre    | Codigo           |Web       |
 |--------|-----------|------------------|----------|
