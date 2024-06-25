@@ -25,14 +25,14 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
-    transition: height .5s, background .3s;
+    transition: height .5s, background .5s;
 }
 
 .nav.sticky {
     height: 50px;
     background: #fff;
     color: black;
-    transition: height .5s, background .3s;
+    transition: height .5s, background .5s;
 }
 
 .menu {
