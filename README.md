@@ -7,3 +7,4 @@
 | 3      | Indicator Menu | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/navigation-menu-indicator)    | [web](https://eridev14.github.io/mini-js-proyects/navigation-menu-indicator/index.html) |
 | 4      | Circular Menu | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/circular-navigation-menu)    | [web](https://eridev14.github.io/mini-js-proyects/circular-navigation-menu/index.html) |
 | 5      | Drop Down Menu 2 | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/drop-down-menu-2)    | [web](https://eridev14.github.io/mini-js-proyects/drop-down-menu-2/index.html) |
+| 6      | Email Validation Check | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/email-validation-check)    | [web](https://eridev14.github.io/mini-js-proyects/email-validation-check/index.html) |
