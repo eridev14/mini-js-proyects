@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drop Down Menu 2</title>
+</head>
+
+<body>
+
+    <div class="card active">
+        <div class="card__header">
+            <div class="card__img">
+                <img src="./programmer.jpg" alt="">
+            </div>
+            <div class="card__txt">
+                <h1 class="card__title">Someone Famous</h1>
+                <h2 class="card__prof">Website Designer</h2>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    <span class="menu__icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="menu__txt">Edit Profile</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    <span class="menu__icon">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    </span>
+                    <span class="menu__txt">Inbox</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    <span class="menu__icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="menu__txt">Settings</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    <span class="menu__icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="menu__txt">Logout</span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="row">
+            <span class="row__icon">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </span>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+        const row = document.querySelector('.row');
+        const card = document.querySelector('.card');
+        row.addEventListener('click', ()=>{
+            card.classList.toggle('active')
+        })
+    </script>
+
+</body>
+
+</html>
