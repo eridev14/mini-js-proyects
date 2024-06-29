@@ -44,6 +44,10 @@ body {
     border-radius: 15px;
 }
 
+.toggle.active {
+    background: #ff3a17;
+}
+
 .toggle:hover {
     cursor: pointer;
 }
@@ -71,11 +75,13 @@ body {
     transform: translateY(0);
     transform: rotate(45deg);
     box-shadow: 0 0 #333;
+    background: #fdeaea;
 }
 
 .toggle.active::after {
     transform: translateY(0);
     transform: rotate(-45deg);
+    background: #fdeaea;
 }
 
 .menu {
