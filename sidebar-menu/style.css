@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.aside {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 300px;
+    padding: 1.5rem 1.5rem 0 .7rem;
+    /* box-sizing: initial; */
+    background: #4d5bf9;
+    border-radius: 10px;
+    border-left: 5px solid #4d5bf9;
+    transition: width .5s;
+    overflow: hidden;
+}
+
+.aside.active {
+    width: 60px;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: #ff9317;
+    border-radius: 15px;
+}
+
+.toggle:hover {
+    cursor: pointer;
+}
+
+.toggle::before,
+.toggle::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: all .5s;
+}
+
+.toggle::before {
+    transform: translateY(-8px);
+    box-shadow: 0 8px #333;
+}
+
+.toggle::after {
+    transform: translateY(8px);
+}
+
+.toggle.active::before {
+    transform: translateY(0);
+    transform: rotate(45deg);
+    box-shadow: 0 0 #333;
+}
+
+.toggle.active::after {
+    transform: translateY(0);
+    transform: rotate(-45deg);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__item {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.menu__link {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    /* border: 1px solid; */
+}
+
+.menu__icon {
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    /* border: 1px solid; */
+}
+
+.menu__title {
+    position: relative;
+    font-size: 1.15rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.menu__item.active .menu__title,
+.menu__item.active .menu__icon {
+    color: black;
+}
+
+.menu__item.active {
+    background: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+.menu__item.active::after,
+.menu__item.active::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: #4d5bf9;
+}
+
+.menu__item.active::after {
+    top: -50%;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 0 0 #fff;
+}
+
+.menu__item.active::before {
+    bottom: -50%;
+    border-top-right-radius: 15px;
+    box-shadow: 5px -5px 0 0 #fff;
+}
