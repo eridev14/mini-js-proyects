@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flat Long Shadow</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #35f0f0;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .text {
+        font-size: 10rem;
+        font-weight: 700;
+        outline: none;
+        text-shadow: 1px 1px 0 #01ded3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text" contenteditable="" class="text">Text</div>
+    <script>
+      const _text = document.getElementById("text");
+      let shadow = "";
+      for (let i = 0; i < 70; i++) {
+        shadow += (shadow ? "," : "") + i * -1 + "px " + i * 1 + "px 0 #01ded3";
+      }
+
+      _text.style.textShadow = shadow;
+    </script>
+  </body>
+</html>
