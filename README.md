@@ -10,3 +10,4 @@
 | 6      | Email Validation Check | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/email-validation-check)    | [web](https://eridev14.github.io/mini-js-proyects/email-validation-check/index.html) |
 | 7      | Sticky Navbar | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/sticky-navbar)    | [web](https://eridev14.github.io/mini-js-proyects/sticky-navbar/index.html) |
 | 8      | Flat Long Shadow | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/flat-long-shadow)    | [web](https://eridev14.github.io/mini-js-proyects/flat-long-shadow/index.html) |
+| 9      | Colorful Hearts | [codigo](https://github.com/eridev14/mini-js-proyects/tree/main/colorful-hearts)    | [web](https://eridev14.github.io/mini-js-proyects/colorful-hearts/index.html) |
