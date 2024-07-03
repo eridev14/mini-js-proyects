@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful Hearts</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background: #1f1f1f;
+        overflow: hidden;
+      }
+
+      span {
+        position: absolute;
+        color: red;
+        border: 1px 1px 10px red;
+        filter: drop-shadow(1px 1px 30px red);
+        pointer-events: none;
+        font-size: 1rem;
+        transform: translate(-50%, -50%);
+        animation: anim 4s linear infinite;
+      }
+
+      @keyframes anim {
+        from {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+        to {
+          opacity: 0;
+          transform: translate(-50%, -1000%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("mousemove", (e) => {
+        const body = document.body;
+        const heart = document.createElement("span");
+        heart.textContent = "❤";
+        let x = e.offsetX;
+        let y = e.offsetY;
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+        let size = Math.random() * 100;
+        heart.style.fontSize = 5 + size + "px";
+        body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
