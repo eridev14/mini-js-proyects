@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Path Scroll</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        margin: 0;
+      }
+
+      .title {
+        position: relative;
+        top: 50px;
+        text-align: center;
+      }
+
+      .clip {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url("./ias.jpg");
+        background-size: 100%;
+        background-attachment: fixed;
+        clip-path: circle(100px at center);
+      }
+
+      .main {
+        position: relative;
+        top: 200vh;
+        padding: 4rem;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Title Scroll Clip Path</h1>
+    <section class="clip"></section>
+    <main class="main">
+      <h2>Scroll</h2>
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+          expedita ullam maxime explicabo, quia facere voluptatum voluptatibus
+          qui architecto, sequi molestiae aperiam dignissimos! Asperiores
+          molestias quis a voluptas, officia consequuntur.</span
+        ><span
+          >Quibusdam fuga qui debitis id at mollitia excepturi incidunt fugiat
+          tenetur adipisci, veniam eos non error eveniet maiores reprehenderit
+          ducimus earum corporis soluta? Necessitatibus placeat quasi dolor
+          labore, quibusdam iusto.</span
+        ><span
+          >Molestiae vel eligendi inventore impedit dolorem. A fugit voluptate
+          id, nemo vel reiciendis, eum consequatur aut odit corrupti ratione
+          eligendi amet. Culpa deleniti debitis voluptates delectus quam
+          accusamus id cum.</span
+        ><span
+          >Consequuntur ullam delectus exercitationem placeat nam inventore
+          quibusdam cum tenetur facilis, modi, laudantium molestiae! Neque
+          adipisci esse maxime consectetur minima voluptas repellendus tenetur
+          iste, similique voluptatibus asperiores inventore, temporibus
+          nobis!</span
+        >
+      </p>
+      <p>
+        <span
+          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+          dolores voluptates voluptatum ducimus dicta perspiciatis tempora fuga?
+          Accusantium, similique assumenda deleniti reiciendis nulla et facere
+          neque eos adipisci, debitis minima.</span
+        ><span
+          >Vel dolore inventore natus dolores voluptates aperiam architecto
+          expedita impedit quas, perspiciatis necessitatibus tempora modi nulla
+          facere. Suscipit, explicabo nihil commodi accusantium reiciendis
+          accusamus tempore, maiores ipsa voluptatibus id quos!</span
+        ><span
+          >Aut assumenda adipisci ex a nihil debitis minima dolore eligendi
+          blanditiis numquam? Optio animi incidunt placeat aut, ipsum, ad
+          commodi dolorum accusamus error necessitatibus explicabo perspiciatis
+          rerum nesciunt odit earum?</span
+        ><span
+          >Velit incidunt accusamus voluptate a pariatur iste quam! Deserunt
+          unde error exercitationem magnam, hic dicta nisi nemo optio ipsa eius
+          at, quaerat ipsum ullam, repellendus id ex dolor eos cupiditate!</span
+        >
+      </p>
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aut
+          eligendi illum fugiat! Aperiam illum natus dolore fuga magni corrupti,
+          pariatur explicabo omnis dolorum similique, quia, placeat voluptatum
+          ratione ex.</span
+        ><span
+          >Voluptatibus officiis atque explicabo mollitia! Iure voluptate
+          officiis libero, incidunt eligendi quidem, ab harum cumque recusandae
+          rerum eius illo ipsa quisquam amet rem blanditiis voluptas? Minima
+          tempore odio explicabo voluptas.</span
+        ><span
+          >Veniam repellat natus aperiam, omnis quae dignissimos ullam dolore
+          dolores, fugit placeat corrupti quaerat dolorem quas, facilis delectus
+          voluptatibus assumenda deserunt ipsa atque. Commodi dolorem suscipit
+          nesciunt quidem dignissimos. Debitis.</span
+        ><span
+          >Rem ipsam, ad saepe error quas, illum quaerat voluptatibus odio
+          officiis deserunt obcaecati voluptates magnam recusandae placeat
+          veritatis repellat nemo reiciendis in illo! Cumque architecto voluptas
+          dolorum provident debitis harum.</span
+        >
+      </p>
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          voluptatum aspernatur quaerat placeat doloremque rem voluptatibus
+          perspiciatis, officiis consequuntur deserunt, nam eveniet pariatur
+          architecto laboriosam similique quibusdam et repellat
+          necessitatibus.</span
+        ><span
+          >Nesciunt libero nihil sapiente, maiores consequatur eveniet
+          consequuntur unde commodi fuga doloribus sed, blanditiis a ex magni
+          obcaecati iure error natus nemo, minus odit. Natus officiis aperiam
+          debitis corrupti temporibus.</span
+        ><span
+          >Asperiores voluptatem assumenda earum excepturi autem nesciunt vel
+          laudantium aperiam voluptas similique quis unde beatae eligendi rem
+          animi, vero, cupiditate consectetur. Recusandae ea debitis dolorum,
+          perspiciatis ipsam eum sapiente dicta.</span
+        ><span
+          >At possimus, labore ullam, nihil quam voluptas aliquid est id quos
+          libero esse. Vitae consequuntur vero voluptas cum pariatur,
+          repellendus accusantium incidunt doloribus, officia eum amet qui!
+          Saepe, deserunt? Ab!</span
+        >
+      </p>
+    </main>
+
+    <script>
+      const _clip = document.querySelector(".clip");
+      window.addEventListener("scroll", () => {
+        let scr = window.scrollY;
+        _clip.style.clipPath = `circle(${scr}px at center)`;
+      });
+    </script>
+  </body>
+</html>
