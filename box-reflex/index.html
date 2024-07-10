@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Reflex</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        display: flex;
+        gap: 10px;
+      }
+
+      .box {
+        width: 150px;
+        height: 200px;
+        border: 1px solid;
+        background: #ccc;
+        -webkit-box-reflect: below 5px linear-gradient(transparent, #fff4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <span class="box">00</span>
+      <span class="box">01</span>
+      <span class="box">24</span>
+    </div>
+  </body>
+</html>
